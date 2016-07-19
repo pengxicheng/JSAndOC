@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jzr-Pp-dcS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--基本使用-->
+        <scene sceneID="UDo-Go-u5D">
+            <objects>
+                <viewController title="基本使用" id="PtC-FX-GP4" customClass="BasicUsageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EPw-BC-wMo"/>
+                        <viewControllerLayoutGuide type="bottom" id="qXw-ec-ud3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dKe-iR-I0e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vc-yy-0Iw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="323"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="KzO-Dr-XkM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="PtC-FX-GP4" id="mWF-b8-xOj"/>
+                                </connections>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXr-nQ-7go">
+                                <rect key="frame" x="20" y="445" width="292" height="27"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95234375000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="其他" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uie-yG-R2E">
+                                <rect key="frame" x="20" y="398" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="插入js的方式（OC调用js方法）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2U-4P-HFz">
+                                <rect key="frame" x="12" y="331" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpR-lF-AfA">
+                                <rect key="frame" x="20" y="360" width="45" height="30"/>
+                                <color key="backgroundColor" red="0.42282590914441393" green="0.95136964209758346" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="方式一"/>
+                                <connections>
+                                    <action selector="insertJavaScript1:" destination="PtC-FX-GP4" eventType="touchUpInside" id="ds2-Cc-kbj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7s-dL-YF1">
+                                <rect key="frame" x="76" y="360" width="45" height="30"/>
+                                <color key="backgroundColor" red="0.42282590914441393" green="0.95136964209758346" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="方式二"/>
+                                <connections>
+                                    <action selector="insertJavaScript2:" destination="PtC-FX-GP4" eventType="touchUpInside" id="AMh-vK-dLT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-Ak-1Gg">
+                                <rect key="frame" x="132" y="360" width="45" height="30"/>
+                                <color key="backgroundColor" red="0.42282590914441393" green="0.95136964209758346" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="方式三"/>
+                                <connections>
+                                    <action selector="insertJavaScript3:" destination="PtC-FX-GP4" eventType="touchUpInside" id="EDx-1K-9Vk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbp-Ba-3qS">
+                                <rect key="frame" x="70" y="395" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.42282590910000001" green="0.95136964209999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="js提交表单"/>
+                                <connections>
+                                    <action selector="submitForm:" destination="PtC-FX-GP4" eventType="touchUpInside" id="eHX-m9-1gN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Vc-yy-0Iw" secondAttribute="trailing" id="YZ9-6m-gOk"/>
+                            <constraint firstItem="9Vc-yy-0Iw" firstAttribute="leading" secondItem="dKe-iR-I0e" secondAttribute="leading" id="egQ-bW-NlE"/>
+                            <constraint firstItem="9Vc-yy-0Iw" firstAttribute="top" secondItem="dKe-iR-I0e" secondAttribute="top" id="s11-bm-Uq5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="OXr-nQ-7go" id="ivl-gE-I5s"/>
+                        <outlet property="webView" destination="9Vc-yy-0Iw" id="UWf-gt-9b8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evN-ie-ich" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="51"/>
+        </scene>
+        <!--Advance Usage View Controller-->
+        <scene sceneID="Ib2-pq-Tyd">
+            <objects>
+                <viewController id="IoL-6n-1fM" customClass="AdvanceUsageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xhv-ep-4h0"/>
+                        <viewControllerLayoutGuide type="bottom" id="x1v-oY-aFC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="70I-IP-FKa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-tJ-RD8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IoL-6n-1fM" id="U7S-MS-hBa"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3FU-tJ-RD8" firstAttribute="top" secondItem="70I-IP-FKa" secondAttribute="top" id="3av-7a-GLg"/>
+                            <constraint firstItem="x1v-oY-aFC" firstAttribute="top" secondItem="3FU-tJ-RD8" secondAttribute="bottom" id="Pa6-UW-iJx"/>
+                            <constraint firstItem="3FU-tJ-RD8" firstAttribute="leading" secondItem="70I-IP-FKa" secondAttribute="leading" id="lfe-te-gPK"/>
+                            <constraint firstAttribute="trailing" secondItem="3FU-tJ-RD8" secondAttribute="trailing" id="pZQ-Ky-vUt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fIF-Sm-irA"/>
+                    <connections>
+                        <outlet property="webView" destination="3FU-tJ-RD8" id="W6f-oT-P1B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6v-Xw-C04" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="756"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRI-q1-972">
+                                <rect key="frame" x="35" y="92" width="129" height="30"/>
+                                <state key="normal" title="OC与JS的基本交互"/>
+                                <connections>
+                                    <segue destination="PtC-FX-GP4" kind="show" id="Z2d-fN-Vew"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVM-Vr-Sdz">
+                                <rect key="frame" x="129" y="388" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut2-J9-pom">
+                                <rect key="frame" x="35" y="135" width="60" height="30"/>
+                                <state key="normal" title="高级用法"/>
+                                <connections>
+                                    <segue destination="IoL-6n-1fM" kind="show" id="UPl-WK-ljh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CFM-7R-RLg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oNt-xv-ctl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jzr-Pp-dcS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZMa-lZ-eKg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Yff-gq-0U6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEC-2m-l6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="389"/>
+        </scene>
+    </scenes>
+</document>
